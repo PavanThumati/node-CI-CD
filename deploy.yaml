@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: node-ci-cd
+  name: node-ci-cd
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: node-ci-cd
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: node-ci-cd
+    spec:
+      containers:
+      - image: pavanthumati/node-ci-cd
+        name: node-ci-cd
+        resources: {}
+status: {}
